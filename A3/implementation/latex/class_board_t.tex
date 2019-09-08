@@ -1,0 +1,246 @@
+\hypertarget{class_board_t}{}\section{BoardT Class Reference}
+\label{class_board_t}\index{BoardT@{BoardT}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_board_t_a140c2de28c7308b08c0d736d671fc299}{BoardT} (std\+::vector$<$ \hyperlink{struct_card_t}{CardT} $>$ cards)
+\begin{DoxyCompactList}\small\item\em Create a Forty Thieves gamebaord. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_t_a0c55adc3925fe48ae0672d29d975aac4}{tab\+\_\+mv} (CategoryT c, unsigned int n1, unsigned int n2)
+\begin{DoxyCompactList}\small\item\em Moves a card from the a tableau cardstack to either another tableau cardstack or a foundation cardstack. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_t_a2656775270574758d508b3e6b026d711}{waste\+\_\+mv} (CategoryT c, unsigned int n)
+\begin{DoxyCompactList}\small\item\em Will move a card from the waste to either the tableau or the foundation. \end{DoxyCompactList}\item 
+void \hyperlink{class_board_t_a548e3e518666a6f38b49e072a88a6d2c}{deck\+\_\+mv} ()
+\begin{DoxyCompactList}\small\item\em Will move a card from the waste to either the tableau or the foundation. \end{DoxyCompactList}\item 
+\hyperlink{class_stack}{Card\+StackT} \hyperlink{class_board_t_af7157e485cd48aa4c3f52d391af1fef3}{get\+\_\+tab} (int i)
+\begin{DoxyCompactList}\small\item\em Will retrieve the stack of cards in the tableau. \end{DoxyCompactList}\item 
+\hyperlink{class_stack}{Card\+StackT} \hyperlink{class_board_t_ac61569f97fe32c08aeecc0583170282c}{get\+\_\+foundation} (int i)
+\begin{DoxyCompactList}\small\item\em Will retrieve the stack of cards in the foundation. \end{DoxyCompactList}\item 
+\hyperlink{class_stack}{Card\+StackT} \hyperlink{class_board_t_a1e3a7edd2e993d22a453da1487177585}{get\+\_\+waste} ()
+\begin{DoxyCompactList}\small\item\em Will retrieve the waste pile. \end{DoxyCompactList}\item 
+\hyperlink{class_stack}{Card\+StackT} \hyperlink{class_board_t_a2f28e0a5e9c34f396e2aebc79342a225}{get\+\_\+deck} ()
+\begin{DoxyCompactList}\small\item\em Will retrieve the deck. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_t_a9420e96ccd6692d0e63054277c5ef672}{valid\+\_\+mv\+\_\+exists} ()
+\begin{DoxyCompactList}\small\item\em Will return a bool value that checks if a move is possible. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_t_a163bed593a3f0ba24dd5401b595b75cd}{is\+\_\+win\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em Will return a bool value that checks if the game is won. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_t_afe6861b6e3ddeeaa1387e92ba71200eb}{is\+\_\+valid\+\_\+tab\+\_\+mv} (CategoryT c, unsigned int n1, unsigned int n2)
+\begin{DoxyCompactList}\small\item\em Will return a bool value that checks if a specific tableau move is possible. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_t_ab448ae18fcc213db945c358e4f99585f}{is\+\_\+valid\+\_\+waste\+\_\+mv} (CategoryT c, unsigned int n1)
+\begin{DoxyCompactList}\small\item\em Will return a bool value that checks if a specific waste move is possible. \end{DoxyCompactList}\item 
+bool \hyperlink{class_board_t_affe6cfc5c246bcfa0afd59476c70db8c}{is\+\_\+valid\+\_\+deck\+\_\+mv} ()
+\begin{DoxyCompactList}\small\item\em Will return a bool value that checks if a deck move is possible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_t_a140c2de28c7308b08c0d736d671fc299}\label{class_board_t_a140c2de28c7308b08c0d736d671fc299}} 
+\index{BoardT@{BoardT}!BoardT@{BoardT}}
+\index{BoardT@{BoardT}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{Board\+T()}{BoardT()}}
+{\footnotesize\ttfamily Board\+T\+::\+BoardT (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{struct_card_t}{CardT} $>$}]{cards }\end{DoxyParamCaption})}
+
+
+
+Create a Forty Thieves gamebaord. 
+
+A Forty Thieves gameboard is created with a tableau of 10 cardstacks, a foundation of 8 cardstacks, a deck and an empty waste stack. It will be the default gameboard for the game. 
+\begin{DoxyParams}{Parameters}
+{\em cards} & A deck of cards containing two cards of each rank \& suit is distributed randomly throughout the gameboard. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_t_a548e3e518666a6f38b49e072a88a6d2c}\label{class_board_t_a548e3e518666a6f38b49e072a88a6d2c}} 
+\index{BoardT@{BoardT}!deck\+\_\+mv@{deck\+\_\+mv}}
+\index{deck\+\_\+mv@{deck\+\_\+mv}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{deck\+\_\+mv()}{deck\_mv()}}
+{\footnotesize\ttfamily void Board\+T\+::deck\+\_\+mv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will move a card from the waste to either the tableau or the foundation. 
+
+The function will check if a move is possible and if valid, will pop off the card from the deck and push the top onto the waste stack. \mbox{\Hypertarget{class_board_t_a2f28e0a5e9c34f396e2aebc79342a225}\label{class_board_t_a2f28e0a5e9c34f396e2aebc79342a225}} 
+\index{BoardT@{BoardT}!get\+\_\+deck@{get\+\_\+deck}}
+\index{get\+\_\+deck@{get\+\_\+deck}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{get\+\_\+deck()}{get\_deck()}}
+{\footnotesize\ttfamily \hyperlink{class_stack}{Card\+StackT} Board\+T\+::get\+\_\+deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will retrieve the deck. 
+
+\begin{DoxyReturn}{Returns}
+A Card\+StackT of the deck 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_ac61569f97fe32c08aeecc0583170282c}\label{class_board_t_ac61569f97fe32c08aeecc0583170282c}} 
+\index{BoardT@{BoardT}!get\+\_\+foundation@{get\+\_\+foundation}}
+\index{get\+\_\+foundation@{get\+\_\+foundation}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{get\+\_\+foundation()}{get\_foundation()}}
+{\footnotesize\ttfamily \hyperlink{class_stack}{Card\+StackT} Board\+T\+::get\+\_\+foundation (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Will retrieve the stack of cards in the foundation. 
+
+The function will check if the index between 0 and 8 and if valid, will return the cardstack. 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the desired foundation cardstack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of Card\+Ts from the foundation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_af7157e485cd48aa4c3f52d391af1fef3}\label{class_board_t_af7157e485cd48aa4c3f52d391af1fef3}} 
+\index{BoardT@{BoardT}!get\+\_\+tab@{get\+\_\+tab}}
+\index{get\+\_\+tab@{get\+\_\+tab}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{get\+\_\+tab()}{get\_tab()}}
+{\footnotesize\ttfamily \hyperlink{class_stack}{Card\+StackT} Board\+T\+::get\+\_\+tab (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Will retrieve the stack of cards in the tableau. 
+
+The function will check if the index between 0 and 10 and if valid, will return the cardstack. 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the desired tableau cardstack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of Card\+Ts from the tableau. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_a1e3a7edd2e993d22a453da1487177585}\label{class_board_t_a1e3a7edd2e993d22a453da1487177585}} 
+\index{BoardT@{BoardT}!get\+\_\+waste@{get\+\_\+waste}}
+\index{get\+\_\+waste@{get\+\_\+waste}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{get\+\_\+waste()}{get\_waste()}}
+{\footnotesize\ttfamily \hyperlink{class_stack}{Card\+StackT} Board\+T\+::get\+\_\+waste (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will retrieve the waste pile. 
+
+\begin{DoxyReturn}{Returns}
+A Card\+StackT of the waste pile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_affe6cfc5c246bcfa0afd59476c70db8c}\label{class_board_t_affe6cfc5c246bcfa0afd59476c70db8c}} 
+\index{BoardT@{BoardT}!is\+\_\+valid\+\_\+deck\+\_\+mv@{is\+\_\+valid\+\_\+deck\+\_\+mv}}
+\index{is\+\_\+valid\+\_\+deck\+\_\+mv@{is\+\_\+valid\+\_\+deck\+\_\+mv}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+deck\+\_\+mv()}{is\_valid\_deck\_mv()}}
+{\footnotesize\ttfamily bool Board\+T\+::is\+\_\+valid\+\_\+deck\+\_\+mv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will return a bool value that checks if a deck move is possible. 
+
+The function will check if a move from the deck to the waste pile is possble by checking to see if the deck is not empty. \begin{DoxyReturn}{Returns}
+A boolean value of whether a deck move is possible or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_afe6861b6e3ddeeaa1387e92ba71200eb}\label{class_board_t_afe6861b6e3ddeeaa1387e92ba71200eb}} 
+\index{BoardT@{BoardT}!is\+\_\+valid\+\_\+tab\+\_\+mv@{is\+\_\+valid\+\_\+tab\+\_\+mv}}
+\index{is\+\_\+valid\+\_\+tab\+\_\+mv@{is\+\_\+valid\+\_\+tab\+\_\+mv}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+tab\+\_\+mv()}{is\_valid\_tab\_mv()}}
+{\footnotesize\ttfamily bool Board\+T\+::is\+\_\+valid\+\_\+tab\+\_\+mv (\begin{DoxyParamCaption}\item[{CategoryT}]{c,  }\item[{unsigned int}]{n1,  }\item[{unsigned int}]{n2 }\end{DoxyParamCaption})}
+
+
+
+Will return a bool value that checks if a specific tableau move is possible. 
+
+The function will check if a specific move from a tableau cardstack to another cardstack on the gameboard is possible. It will return false if c is Waste or Deck. The function also checks if n1 \& n2 are within the right range. 
+\begin{DoxyParams}{Parameters}
+{\em c} & An input of type CategoryT (Tableau, Foundation, Waste, Deck) \\
+\hline
+{\em n1} & The index of the tableau cardstack with the card wanting to be moved \\
+\hline
+{\em n2} & The index of the destination cardstack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value of whether a tableau move is possible or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_ab448ae18fcc213db945c358e4f99585f}\label{class_board_t_ab448ae18fcc213db945c358e4f99585f}} 
+\index{BoardT@{BoardT}!is\+\_\+valid\+\_\+waste\+\_\+mv@{is\+\_\+valid\+\_\+waste\+\_\+mv}}
+\index{is\+\_\+valid\+\_\+waste\+\_\+mv@{is\+\_\+valid\+\_\+waste\+\_\+mv}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{is\+\_\+valid\+\_\+waste\+\_\+mv()}{is\_valid\_waste\_mv()}}
+{\footnotesize\ttfamily bool Board\+T\+::is\+\_\+valid\+\_\+waste\+\_\+mv (\begin{DoxyParamCaption}\item[{CategoryT}]{c,  }\item[{unsigned int}]{n1 }\end{DoxyParamCaption})}
+
+
+
+Will return a bool value that checks if a specific waste move is possible. 
+
+The function will check if a specific move from the waste pile to another cardstack on the gameboard is possible. It will return false if c is Waste or Deck. The function also checks if n1 is within the right range. 
+\begin{DoxyParams}{Parameters}
+{\em c} & An input of type CategoryT (Tableau, Foundation, Waste, Deck) \\
+\hline
+{\em n1} & The index of the desitnation cardstack. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value of whether a waste move is possible or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_a163bed593a3f0ba24dd5401b595b75cd}\label{class_board_t_a163bed593a3f0ba24dd5401b595b75cd}} 
+\index{BoardT@{BoardT}!is\+\_\+win\+\_\+state@{is\+\_\+win\+\_\+state}}
+\index{is\+\_\+win\+\_\+state@{is\+\_\+win\+\_\+state}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{is\+\_\+win\+\_\+state()}{is\_win\_state()}}
+{\footnotesize\ttfamily bool Board\+T\+::is\+\_\+win\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will return a bool value that checks if the game is won. 
+
+The function will check if every foundation stack is non-\/empty and if the top card is a K\+I\+NG. If true, the function will return true as these are the conditins of a complete game. \begin{DoxyReturn}{Returns}
+A boolean value of whether the user has won the game or not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_a0c55adc3925fe48ae0672d29d975aac4}\label{class_board_t_a0c55adc3925fe48ae0672d29d975aac4}} 
+\index{BoardT@{BoardT}!tab\+\_\+mv@{tab\+\_\+mv}}
+\index{tab\+\_\+mv@{tab\+\_\+mv}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{tab\+\_\+mv()}{tab\_mv()}}
+{\footnotesize\ttfamily void Board\+T\+::tab\+\_\+mv (\begin{DoxyParamCaption}\item[{CategoryT}]{c,  }\item[{unsigned int}]{n1,  }\item[{unsigned int}]{n2 }\end{DoxyParamCaption})}
+
+
+
+Moves a card from the a tableau cardstack to either another tableau cardstack or a foundation cardstack. 
+
+The function will check is a move to certain category is possible and if valid, will \char`\"{}move the card\char`\"{} by popping it off one stack and pushing the top onto the other. 
+\begin{DoxyParams}{Parameters}
+{\em c} & An input of type CategoryT (Tableau, Foundation, Waste, Deck) \\
+\hline
+{\em n1} & The index of the tableau cardstack with the card wanting to be moved \\
+\hline
+{\em n2} & The index of the destination cardstack \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_t_a9420e96ccd6692d0e63054277c5ef672}\label{class_board_t_a9420e96ccd6692d0e63054277c5ef672}} 
+\index{BoardT@{BoardT}!valid\+\_\+mv\+\_\+exists@{valid\+\_\+mv\+\_\+exists}}
+\index{valid\+\_\+mv\+\_\+exists@{valid\+\_\+mv\+\_\+exists}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{valid\+\_\+mv\+\_\+exists()}{valid\_mv\_exists()}}
+{\footnotesize\ttfamily bool Board\+T\+::valid\+\_\+mv\+\_\+exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Will return a bool value that checks if a move is possible. 
+
+The function will check if a valid tab move, a valid foundation move or a valid deck move exists. If any are true, it will return a true value infroming users that a move is possible. \begin{DoxyReturn}{Returns}
+A boolean value of whether a move is possible in the deck 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_t_a2656775270574758d508b3e6b026d711}\label{class_board_t_a2656775270574758d508b3e6b026d711}} 
+\index{BoardT@{BoardT}!waste\+\_\+mv@{waste\+\_\+mv}}
+\index{waste\+\_\+mv@{waste\+\_\+mv}!BoardT@{BoardT}}
+\subsubsection{\texorpdfstring{waste\+\_\+mv()}{waste\_mv()}}
+{\footnotesize\ttfamily void Board\+T\+::waste\+\_\+mv (\begin{DoxyParamCaption}\item[{CategoryT}]{c,  }\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+
+
+Will move a card from the waste to either the tableau or the foundation. 
+
+The function will check if a move is possible and if valid, will pop off the card from the waste stack and push the top onto the inputted stack. 
+\begin{DoxyParams}{Parameters}
+{\em c} & An input of type CategoryT (Tableau, Foundation, Waste, Deck) \\
+\hline
+{\em n} & The index of the destination cardstack \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_game_board_8h}{Game\+Board.\+h}\end{DoxyCompactItemize}

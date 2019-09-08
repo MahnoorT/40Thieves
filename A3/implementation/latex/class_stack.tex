@@ -1,0 +1,136 @@
+\hypertarget{class_stack}{}\section{Stack$<$ Item $>$ Class Template Reference}
+\label{class_stack}\index{Stack$<$ Item $>$@{Stack$<$ Item $>$}}
+
+
+General stack A\+DT used to implmenent a stack of cards (Card\+StackT)  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_stack_a083c179125f1254a5bdcd419406f108d}{Stack} (std\+::vector$<$ Item $>$ stack)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+\hyperlink{class_stack}{Stack} \hyperlink{class_stack_a1b824e319a20ee57c37c1df2270f65d2}{push} (Item item)
+\begin{DoxyCompactList}\small\item\em Pushes a new item onto the \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+\hyperlink{class_stack}{Stack} \hyperlink{class_stack_abd1f79b5fc7fe4b04929987b54955b67}{pop} ()
+\begin{DoxyCompactList}\small\item\em Removes the top element of a \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+Item \hyperlink{class_stack_a84b12c3a32d914a499424888d34bca5e}{top} ()
+\begin{DoxyCompactList}\small\item\em Accesses the top element of an array. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_stack_acfa3b26a78a68e3627bcb9d5198a0b3c}{size} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of items in a \hyperlink{class_stack}{Stack}. \end{DoxyCompactList}\item 
+std\+::vector$<$ Item $>$ \hyperlink{class_stack_a9fd3ed2f352a7f9128e8c7fc48bc038d}{to\+Seq} ()
+\begin{DoxyCompactList}\small\item\em Converts the stack into a sequence of type Item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Item$>$\newline
+class Stack$<$ Item $>$}
+
+General stack A\+DT used to implmenent a stack of cards (Card\+StackT) 
+
+This abstract data type is used to construct a default stack that will be used to construct any stack of cards in the game. The A\+DT allowed for Items to be pushed onto the stack, popped off, access the top element, get the size and return a sequence of Items. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_stack_a083c179125f1254a5bdcd419406f108d}\label{class_stack_a083c179125f1254a5bdcd419406f108d}} 
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{Stack()}{Stack()}}
+{\footnotesize\ttfamily template$<$typename Item$>$ \\
+\hyperlink{class_stack}{Stack}$<$ Item $>$\+::\hyperlink{class_stack}{Stack} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Item $>$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Creates a new \hyperlink{class_stack}{Stack}. 
+
+Initializes a new stack given a vector of Items 
+\begin{DoxyParams}{Parameters}
+{\em stack} & A vector of Items \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stack_abd1f79b5fc7fe4b04929987b54955b67}\label{class_stack_abd1f79b5fc7fe4b04929987b54955b67}} 
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename Item$>$ \\
+\hyperlink{class_stack}{Stack} \hyperlink{class_stack}{Stack}$<$ Item $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the top element of a \hyperlink{class_stack}{Stack}. 
+
+\begin{DoxyReturn}{Returns}
+A new array with the top element removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stack_a1b824e319a20ee57c37c1df2270f65d2}\label{class_stack_a1b824e319a20ee57c37c1df2270f65d2}} 
+\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename Item$>$ \\
+\hyperlink{class_stack}{Stack} \hyperlink{class_stack}{Stack}$<$ Item $>$\+::push (\begin{DoxyParamCaption}\item[{Item}]{item }\end{DoxyParamCaption})}
+
+
+
+Pushes a new item onto the \hyperlink{class_stack}{Stack}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em An} & item of type Item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new stack with the pushed item added 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stack_acfa3b26a78a68e3627bcb9d5198a0b3c}\label{class_stack_acfa3b26a78a68e3627bcb9d5198a0b3c}} 
+\index{Stack@{Stack}!size@{size}}
+\index{size@{size}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Item$>$ \\
+unsigned int \hyperlink{class_stack}{Stack}$<$ Item $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of items in a \hyperlink{class_stack}{Stack}. 
+
+\begin{DoxyReturn}{Returns}
+An int of the size of the stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stack_a84b12c3a32d914a499424888d34bca5e}\label{class_stack_a84b12c3a32d914a499424888d34bca5e}} 
+\index{Stack@{Stack}!top@{top}}
+\index{top@{top}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily template$<$typename Item$>$ \\
+Item \hyperlink{class_stack}{Stack}$<$ Item $>$\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Accesses the top element of an array. 
+
+\begin{DoxyReturn}{Returns}
+The top element of the stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stack_a9fd3ed2f352a7f9128e8c7fc48bc038d}\label{class_stack_a9fd3ed2f352a7f9128e8c7fc48bc038d}} 
+\index{Stack@{Stack}!to\+Seq@{to\+Seq}}
+\index{to\+Seq@{to\+Seq}!Stack@{Stack}}
+\subsubsection{\texorpdfstring{to\+Seq()}{toSeq()}}
+{\footnotesize\ttfamily template$<$typename Item$>$ \\
+std\+::vector$<$Item$>$ \hyperlink{class_stack}{Stack}$<$ Item $>$\+::to\+Seq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Converts the stack into a sequence of type Item. 
+
+\begin{DoxyReturn}{Returns}
+A vector of type Items in the stack 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{_stack_8h}{Stack.\+h}\end{DoxyCompactItemize}
